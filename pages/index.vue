@@ -78,7 +78,7 @@ const showStoreMessage = () => {
 
 <template>
 
-  <v-row class="mt-2" no-gutters>
+  <v-row class="mt-2">
     <v-col cols="12" md="4" offset-md="4">
       <v-img src="/imgs/16bitlogo.webp" height="50vh" lazy-src="/imgs/16bitlogo.webp"
              alt="logo" contain class="pa-10 hvr-grow" @click="showBoopMessage">
