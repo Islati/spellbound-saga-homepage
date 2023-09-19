@@ -1,7 +1,7 @@
 <template>
-  <VApp>
+  <VApp class="homepage-hero">
     <VMain>
-      <v-container fluid class="homepage-hero">
+      <v-container fluid>
         <slot/>
       </v-container>
     </VMain>

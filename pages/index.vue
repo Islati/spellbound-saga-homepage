@@ -100,8 +100,8 @@ useSeoMeta({
 
     </v-col>
 
-    <v-col cols="12" md="4" offset-md="4" class="text-center">
-      <h1 class="text-center animate__animated animate__pulse animate__infinite animate__slower">
+    <v-col cols="12" md="4" offset-md="4">
+      <h1 class="text-center animate__animated animate__pulse animate__infinite animate__slower header-text">
         {{ $t('welcome-message') }}</h1>
     </v-col>
   </v-row>
@@ -128,6 +128,10 @@ useSeoMeta({
 
 a {
   color: gold;
+}
+
+.header-text {
+  text-align: center;
 }
 
 </style>

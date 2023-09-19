@@ -3,10 +3,6 @@ import vuetify from "vite-plugin-vuetify";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 // @ts-ignore
 export default defineNuxtConfig({
-    app: {
-        buildAssetsDir: "assets",
-        // baseURL: '/'
-    },
     css: ["@/assets/scss/main.scss"],
     ssr: false,
     // imports: {
