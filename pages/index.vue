@@ -100,7 +100,7 @@ useSeoMeta({
 
     </v-col>
 
-    <v-col cols="12">
+    <v-col cols="12" md="4" offset-md="4" class="text-center">
       <h1 class="text-center animate__animated animate__pulse animate__infinite animate__slower">
         {{ $t('welcome-message') }}</h1>
     </v-col>
