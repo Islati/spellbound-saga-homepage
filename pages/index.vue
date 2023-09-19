@@ -3,7 +3,7 @@ import "animate.css";
 import {useI18n} from "vue-i18n";
 import {useToast} from "vue-toast-notification";
 
-const showingMessages = ref(false);
+// const showingMessages = ref(false);
 const {t} = useI18n();
 const messages = [
   {
@@ -38,9 +38,9 @@ const storeMessages = [
 const messageDelay = 1250;
 
 const showMessages = (messages) => {
-  if (showingMessages.value) return;
+  // if (showingMessages.value) return;
 
-  showingMessages.value = true;
+  // showingMessages.value = true;
 
   const toast = useToast();
 
@@ -62,9 +62,9 @@ const showMessages = (messages) => {
   });
 
   /* Clear the delay */
-  setTimeout(() => {
-    showingMessages.value = false;
-  }, messageDelay * messages.length);
+  // setTimeout(() => {
+  //   showingMessages.value = false;
+  // }, messageDelay * messages.length);
 };
 
 const showBoopMessage = () => {
