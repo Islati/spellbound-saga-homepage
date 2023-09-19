@@ -1,0 +1,1 @@
+import{S as p,T as o,U as e,u as i}from"./entry.914759f6.js";const t=p({title:"SpellBound Saga",theme:{dark:!0}}),a={},f=o(t,a);function u(){const n=i();return n._appConfig||(n._appConfig=e(f)),n._appConfig}export{u};

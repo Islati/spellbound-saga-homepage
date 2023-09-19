@@ -1,1 +1,0 @@
-import{_ as s,k as l,S as _,s as e,q as a,a0 as n,W as o,a1 as r,a2 as c}from"./entry.8894b140.js";const u={};function d(t,f){return l(),_(c,null,{default:e(()=>[a(r,null,{default:e(()=>[a(n,{fluid:"",class:"homepage-hero"},{default:e(()=>[o(t.$slots,"default")]),_:3})]),_:3})]),_:3})}const p=s(u,[["render",d]]);export{p as default};
