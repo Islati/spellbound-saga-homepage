@@ -101,7 +101,7 @@ useSeoMeta({
     </v-col>
 
     <v-col cols="12" md="4" offset-md="4">
-      <h1 class="text-center animate__animated animate__pulse animate__infinite animate__slower header-text">
+      <h1 class="text-center animate__animated animate__pulse animate__infinite animate__slower">
         {{ $t('welcome-message') }}</h1>
     </v-col>
   </v-row>
@@ -130,7 +130,30 @@ a {
   color: gold;
 }
 
-.header-text {
+.pointer {
+  cursor: pointer;
+}
+
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  @extend .pointer;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.05);
+}
+
+.text-center {
   text-align: center;
 }
 
