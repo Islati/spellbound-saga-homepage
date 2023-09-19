@@ -61,9 +61,5 @@ export default defineNuxtConfig({
             nuxt.hooks.hook("vite:extendConfig", (config) => config.plugins.push(vuetify()));
         },
     ],
-    app: {
-        baseURL: '/spellbound-saga-homepage/',
-        buildAssetsDir: 'assets',
-    },
     runtimeConfig: {}
 });
