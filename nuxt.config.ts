@@ -1,17 +1,17 @@
 import vuetify from "vite-plugin-vuetify";
 
-// PWA Config
-const title = "Spellbound Saga | MMO Card Game";
-const shortTitle = "Collect, Trade, and Conquer";
-const description = "SpellBound Saga is a collectible card game built by Islati (Skreet) with love for your enjoyment.";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
-
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 // @ts-ignore
 export default defineNuxtConfig({
+    app: {
+        buildAssetsDir: "assets",
+        baseURL: '/'
+    },
     css: ["@/assets/scss/main.scss"],
     ssr: false,
+    imports: {
+        autoImport: true,
+    },
     nitro: {
         timing: true,
         publicAssets: [
@@ -52,8 +52,10 @@ export default defineNuxtConfig({
     modules: [
         "nuxt-icon",
         '@pinia/nuxt',
-        '@pinia-plugin-persistedstate/nuxt',
-        "@vueuse/nuxt",
+        "nuxt-purgecss",
+        '@nuxt/devtools',
+        '@nuxt/image',
+        '@vite-pwa/nuxt',
         // this adds the vuetify vite plugin
         // also produces type error_handlers in the current beta release
         async (options: any, nuxt: any) => {
@@ -61,5 +63,23 @@ export default defineNuxtConfig({
             nuxt.hooks.hook("vite:extendConfig", (config) => config.plugins.push(vuetify()));
         },
     ],
+    pwa: {
+        registerType: 'autoUpdate',
+        manifest: {
+            name: "Spellbound Saga",
+            short_name: "Spellbound Saga",
+        },
+        workbox: {
+            navigateFallback: '/',
+            globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+        },
+        devOptions: {
+            enabled: true,
+            suppressWarnings: true,
+            navigateFallbackAllowlist: [/^\/$/],
+            type: 'module',
+        }
+    },
+
     runtimeConfig: {}
 });

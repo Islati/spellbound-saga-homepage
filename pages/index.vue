@@ -5,7 +5,7 @@ import {useToast} from "vue-toast-notification";
 
 const showingMessages = ref(false);
 const {t} = useI18n();
-const messages = ref([
+const messages = [
   {
     message: 'boop',
     type: 'success'
@@ -18,9 +18,9 @@ const messages = ref([
     message: 'hope-you-enjoy',
     type: 'success'
   }
-])
+];
 
-const storeMessages = ref([
+const storeMessages = [
   {
     message: 'store-coming-soon-curious',
     type: 'success'
@@ -33,8 +33,9 @@ const storeMessages = ref([
     message: "thanks-for-support",
     type: 'success'
   }
-])
-const messageDelay = ref(1250);
+]
+
+const messageDelay = 1250;
 
 const showMessages = (messages) => {
   if (showingMessages.value) return;
@@ -57,22 +58,35 @@ const showMessages = (messages) => {
       else if (type === "warning") toast.warning(message, options);
       else
         toast.default(message, options);
-    }, messageDelay.value * index);
+    }, messageDelay * index);
   });
 
   /* Clear the delay */
   setTimeout(() => {
     showingMessages.value = false;
-  }, messageDelay.value * messages.length);
+  }, messageDelay * messages.length);
 };
 
 const showBoopMessage = () => {
-  showMessages(messages.value);
+  showMessages(messages);
 };
 
 const showStoreMessage = () => {
-  showMessages(storeMessages.value);
+  showMessages(storeMessages);
 };
+
+useHead({
+  title: t('title'),
+})
+
+useSeoMeta({
+  title: t('title'),
+  ogTitle: t('title'),
+  description: `${t('title')} - ${t('description')}`,
+  ogDescription: `${t('title')} - ${t('description')}`,
+  ogImage: "/imgs/entry-dungeon.webp",
+  twitterCard: "summary_large_image"
+})
 </script>
 
 
@@ -80,10 +94,10 @@ const showStoreMessage = () => {
 
   <v-row class="mt-2">
     <v-col cols="12" md="4" offset-md="4">
-      <v-img src="/imgs/16bitlogo.webp" height="50vh" lazy-src="/imgs/16bitlogo.webp"
+      <NuxtImg src="/imgs/16bitlogo.webp" height="50vh" lazy-src="/imgs/16bitlogo.webp"
              alt="logo" contain class="pa-10 hvr-grow" @click="showBoopMessage">
 
-      </v-img>
+      </NuxtImg>
 
     </v-col>
 

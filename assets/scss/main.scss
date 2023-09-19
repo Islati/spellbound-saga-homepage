@@ -103,8 +103,13 @@
 *,
 html,
 body {
-  font-family: "Inter" !important;
+  font-family: "Inter", serif !important;
   -webkit-font-smoothing: antialiased !important;
+}
+
+@font-face {
+  font-family: 'Arial';
+  font-display: swap;
 }
 
 .pointer {
