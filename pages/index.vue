@@ -105,17 +105,17 @@ useSeoMeta({
         {{ $t('welcome-message') }}</h1>
     </v-col>
   </v-row>
-  <v-row>
+  <v-row class="text-center">
 
-    <v-col cols="12" md="2" offset-md="3">
+    <v-col cols="12" md="2" offset-md="3" class="text-center">
       <a href="https://facebook.com/spellboundsagaofficial" target="_blank"><h4 class="text-center">{{
           $t('facebook')
         }}</h4></a>
     </v-col>
-    <v-col cols="12" md="2">
+    <v-col cols="12" md="2" class="text-center">
       <a href="#" @click="showStoreMessage"><h4 class="text-center">{{ $t('store') }}</h4></a>
     </v-col>
-    <v-col cols="12" md="2">
+    <v-col cols="12" md="2" class="text-center">
       <a href="https://youtube.com/@Islati" target="_blank"><h4 class="text-center">{{ $t('youtube') }}</h4></a>
     </v-col>
 
