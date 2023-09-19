@@ -1,1 +1,0 @@
-import{Y as p,Z as o,$ as e,u as i}from"./entry.d961d087.js";const t=p({title:"SpellBound Saga",theme:{dark:!0}}),a={},f=o(t,a);function u(){const n=i();return n._appConfig||(n._appConfig=e(f)),n._appConfig}export{u};
