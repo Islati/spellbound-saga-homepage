@@ -54,7 +54,6 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         "nuxt-purgecss",
         '@nuxt/devtools',
-        '@nuxt/image',
         '@vite-pwa/nuxt',
         // this adds the vuetify vite plugin
         // also produces type error_handlers in the current beta release
