@@ -5,7 +5,7 @@ import vuetify from "vite-plugin-vuetify";
 export default defineNuxtConfig({
     app: {
         buildAssetsDir: "assets",
-        baseURL: '/'
+        // baseURL: '/'
     },
     css: ["@/assets/scss/main.scss"],
     ssr: false,
