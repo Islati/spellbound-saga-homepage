@@ -9,9 +9,9 @@ export default defineNuxtConfig({
     },
     css: ["@/assets/scss/main.scss"],
     ssr: false,
-    imports: {
-        autoImport: true,
-    },
+    // imports: {
+    //     autoImport: true,
+    // },
     nitro: {
         timing: true,
         publicAssets: [
@@ -52,9 +52,7 @@ export default defineNuxtConfig({
     modules: [
         "nuxt-icon",
         '@pinia/nuxt',
-        // "nuxt-purgecss",
         '@nuxt/devtools',
-        '@vite-pwa/nuxt',
         // this adds the vuetify vite plugin
         // also produces type error_handlers in the current beta release
         async (options: any, nuxt: any) => {
