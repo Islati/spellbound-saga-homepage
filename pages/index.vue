@@ -130,31 +130,6 @@ a {
   color: gold;
 }
 
-.pointer {
-  cursor: pointer;
-}
 
-/* Grow */
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-  @extend .pointer;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-  transform: scale(1.05);
-}
-
-.text-center {
-  text-align: center;
-}
 
 </style>
