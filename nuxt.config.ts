@@ -52,7 +52,7 @@ export default defineNuxtConfig({
     modules: [
         "nuxt-icon",
         '@pinia/nuxt',
-        "nuxt-purgecss",
+        // "nuxt-purgecss",
         '@nuxt/devtools',
         '@vite-pwa/nuxt',
         // this adds the vuetify vite plugin
